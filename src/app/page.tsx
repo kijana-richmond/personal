@@ -1,63 +1,61 @@
-import React from "react";
 import Link from "next/link";
+import React from "react";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center p-4">
-      <div className="container max-w-4xl">
-        <h1 className="mb-8 text-center text-4xl font-bold sm:text-6xl">
-          Welcome to KJ&apos;s World
-        </h1>
-        
-        <div className="grid gap-8 sm:grid-cols-2">
-          <Link
-            href="/professional"
-            className="group relative overflow-hidden rounded-lg bg-primary p-6 text-primary-foreground transition-all hover:shadow-lg"
-          >
-            <h2 className="mb-2 text-2xl font-semibold">Professional</h2>
-            <p className="text-primary-foreground/80">
-              Explore my professional work, projects, and experience
+    <div className="flex min-h-screen flex-col">
+      <main className="flex flex-1 items-center justify-center">
+        <div className="container px-4 py-16 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
+              KJ&apos;s Space
+            </h1>
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
+              Welcome to my digital garden—a space where professional expertise meets creative expression.
             </p>
-          </Link>
-
-          <Link
-            href="/personal"
-            className="group relative overflow-hidden rounded-lg bg-secondary p-6 text-secondary-foreground transition-all hover:shadow-lg"
-          >
-            <h2 className="mb-2 text-2xl font-semibold">Personal</h2>
-            <p className="text-secondary-foreground/80">
-              Discover my creative writing, blog posts, and screenplays
-            </p>
-          </Link>
-        </div>
-
-        <footer className="mt-16 text-center text-sm text-muted-foreground">
-          <div className="flex justify-center space-x-4">
-            <a
-              href="mailto:your.email@example.com"
-              className="hover:text-foreground"
-            >
-              Email
-            </a>
-            <a
-              href="https://github.com/yourusername"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-foreground"
-            >
-              GitHub
-            </a>
-            <a
-              href="https://linkedin.com/in/yourusername"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-foreground"
-            >
-              LinkedIn
-            </a>
+            <div className="mt-10 flex justify-center gap-6">
+              <Link
+                href="/professional"
+                className="rounded-lg bg-primary px-4 py-2 text-primary-foreground hover:bg-primary/90"
+              >
+                Professional
+              </Link>
+              <Link
+                href="/personal"
+                className="rounded-lg border border-input bg-background px-4 py-2 hover:bg-accent hover:text-accent-foreground"
+              >
+                Personal
+              </Link>
+            </div>
           </div>
-        </footer>
-      </div>
+        </div>
+      </main>
+      <footer className="border-t py-8">
+        <div className="container flex justify-center space-x-6">
+          <a
+            href="mailto:your.email@example.com"
+            className="text-sm text-muted-foreground hover:text-foreground"
+          >
+            Email
+          </a>
+          <a
+            href="https://github.com/yourusername"
+            className="text-sm text-muted-foreground hover:text-foreground"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+          <a
+            href="https://linkedin.com/in/yourusername"
+            className="text-sm text-muted-foreground hover:text-foreground"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+        </div>
+      </footer>
     </div>
   );
 } 
